@@ -45,7 +45,7 @@ void knapsack(item it[],int N, int capacity)
 int main()
 {
     int capacity,N;
-    cout<<"Enter Capacity:  :";
+    cout<<"Enter Capacity: ";
     cin>>capacity;
     cout<<endl;
     cout<<"Enter number of items: ";
