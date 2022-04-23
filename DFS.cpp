@@ -62,3 +62,22 @@ cout << endl;
 dfs(src);
 return 0;
 }
+
+/*
+Enter the total number of node : 5
+Enter the total number of edge : 5
+0 1
+0 2
+0 3
+1 2
+2 4
+
+Printing the adjacency list :
+0 > 1 2 3
+1 > 0 2
+2 > 0 1 4
+3 > 0
+4 > 2
+DFS:
+0 3 2 4 1
+*/
