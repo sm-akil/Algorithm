@@ -1,5 +1,48 @@
 // author : 𝘀𝗮𝗱𝗶𝗸 𝗶𝗾𝗯𝗮𝗹 𝗮𝗸𝗶𝗹
 
+#include <bits/stdc++.h>
+#define INF 9999
+#define n 4
+using namespace std;
+void Floyd_Warshall(int A[][n]){
+
+   for (int k = 0; k < n; k++){
+     for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+
+     if (A[i][j] > A[i][k] + A[k][j]){
+        A[i][j] = A[i][k] + A[k][j];
+
+         }
+      }
+    }
+}
+
+   for (int i = 0; i < n; i++){
+     for (int j = 0; j < n; j++){
+       cout << A[i][j] << " ";
+   }
+      cout << endl;
+  }
+}
+
+int main()
+{
+int A[n][n];
+cout << "Enter the matrix :";
+
+  for (int i = 0; i < n; i++){
+    for (int j = 0; j < n; j++)
+     {
+       cin >> A[i][j];
+     }
+  cout << endl;
+  }
+  Floyd_Warshall(A);
+}
+
+
+/*
 #include <iostream>
 using namespace std;
 #define nV 4
@@ -47,3 +90,4 @@ int main() {
              {INF, INF, 2, 0}};
   floydWarshall(graph);
 }
+*/
